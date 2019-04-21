@@ -4865,41 +4865,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 &lt;/p&gt;</description>
 <smd name="1" x="-1.905" y="-1.905" dx="1.5" dy="1.8" layer="1"/>
 <smd name="3" x="1.905" y="-1.905" dx="1.5" dy="1.8" layer="1"/>
-<smd name="2" x="0" y="-1.905" dx="1.8" dy="0.7" layer="1" rot="R90" stop="no" cream="no"/>
-<polygon width="0" layer="1">
-<vertex x="-0.35" y="0.635"/>
-<vertex x="-0.35" y="-1.905"/>
-<vertex x="0.35" y="-1.905"/>
-<vertex x="0.35" y="0.635"/>
-</polygon>
-<polygon width="0" layer="1">
-<vertex x="-1.2" y="3.52375"/>
-<vertex x="-1.2" y="-0.47625"/>
-<vertex x="1.2" y="-0.47625"/>
-<vertex x="1.2" y="3.52375"/>
-</polygon>
-<polygon width="0" layer="31">
-<vertex x="-0.35" y="0.635"/>
-<vertex x="-0.35" y="-2.805"/>
-<vertex x="0.35" y="-2.805"/>
-<vertex x="0.35" y="0.635"/>
-</polygon>
-<polygon width="0" layer="31">
-<vertex x="-1.2" y="3.52375"/>
-<vertex x="-1.2" y="-0.47625"/>
-<vertex x="1.2" y="-0.47625"/>
-<vertex x="1.2" y="3.52375"/>
-</polygon>
-<polygon width="0" layer="29">
-<vertex x="-1.349375" y="3.65125"/>
-<vertex x="-1.349375" y="-0.635"/>
-<vertex x="-0.47625" y="-0.635"/>
-<vertex x="-0.47625" y="-2.936875"/>
-<vertex x="0.47625" y="-2.936875"/>
-<vertex x="0.47625" y="-0.635"/>
-<vertex x="1.349375" y="-0.635"/>
-<vertex x="1.349375" y="3.65125"/>
-</polygon>
+<smd name="2" x="0" y="-1.905" dx="1.8" dy="0.7" layer="1" rot="R90"/>
 <wire x1="-2.38125" y1="-0.79375" x2="2.38125" y2="-0.79375" width="0.3048" layer="51"/>
 <wire x1="2.38125" y1="-0.79375" x2="2.38125" y2="1.74625" width="0.3048" layer="51"/>
 <wire x1="2.38125" y1="1.74625" x2="-2.38125" y2="1.74625" width="0.3048" layer="51"/>
@@ -4946,6 +4912,7 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <wire x1="1.42875" y1="2.06375" x2="1.42875" y2="3.65125" width="0.127" layer="39"/>
 <text x="-5.08" y="-2.54" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
 <text x="-3.175" y="-2.54" size="1.27" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<smd name="4" x="0" y="1.5875" dx="3.8" dy="2.4" layer="1" rot="R90"/>
 </package>
 <package name="SOT23">
 <description>&lt;p&gt;
@@ -5005,8 +4972,9 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <text x="-7.62" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
 <text x="-2.032" y="-4.318" size="1.524" layer="95">GND</text>
 <pin name="VI" x="-10.16" y="0" length="short" direction="in"/>
-<pin name="GND" x="0" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="GND@1" x="0" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
 <pin name="VO" x="10.16" y="0" length="short" direction="pwr" rot="R180"/>
+<pin name="GND@2" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
 </symbol>
 <symbol name="OPACSIO">
 <description>&lt;p&gt;
@@ -5091,7 +5059,8 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <devices>
 <device name="ACY" package="SOT89W">
 <connects>
-<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="GND@1" pad="2"/>
+<connect gate="G$1" pin="GND@2" pad="4"/>
 <connect gate="G$1" pin="VI" pad="3"/>
 <connect gate="G$1" pin="VO" pad="1"/>
 </connects>
@@ -8600,7 +8569,7 @@ reset button</text>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<pinref part="IC2" gate="G$1" pin="GND"/>
+<pinref part="IC2" gate="G$1" pin="GND@1"/>
 </segment>
 <segment>
 <pinref part="C10" gate="G$1" pin="2"/>

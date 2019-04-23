@@ -1,0 +1,41 @@
+Qty;Order;Distributor;Reference;VALUE;Description
+1;SMD 1/4W 0,0;Reichelt;R17;0R;YAGEO RC1206 -  General Purpose Chip Resistors
+2;X7R-G1206 100N;Reichelt;C15, C21;100n/50V;X7R Ceramic Capacitors
+5;X7R-G1206 100N;Reichelt;C3, C10, C11, C17, C18;100n/50V;X7R Ceramic Capacitors
+1;44W-10K;Reichelt;R12;10K;Model 44 -  Cermet Trimming Potentiometer - TT Electronics
+3;SMD 1/4W 10K;Reichelt;R2, R6, R9;10K;YAGEO RC1206 -  General Purpose Chip Resistors
+4;X7R-G1206 10N;Reichelt;C1, C2, C4, C5;10n/50V;X7R Ceramic Capacitors
+1;X7R-G1210 10;Reichelt;C9;10µ/35V;X7R Ceramic Capacitors
+2;VF 150/35 P-F;Reichelt;C6, C8;150µ/35V;Aluminum Electrolytic Capacitors
+4;SMD 1/4W 1,0K;Reichelt;R4, R5, R10, R13;1K;YAGEO RC1206 -  General Purpose Chip Resistors
+2;SMD 1/4W 1,0;Reichelt;R14, R15;1R;YAGEO RC1206 -  General Purpose Chip Resistors
+1;SMD 1/4W 200;Reichelt;R16;200R;YAGEO RC1206 -  General Purpose Chip Resistors
+1;NPO-G1206 220P;Reichelt;C13;220p/50V;NP0 Surface-Mount Ceramic Multilayer Capacitors
+1;SMD 1/4W 22K;Reichelt;R1;22K;YAGEO RC1206 -  General Purpose Chip Resistors
+1;X7R-G1206 22N;Reichelt;C14;22n/50V;X7R Ceramic Capacitors
+1;WSL 6G;Reichelt;X2;2X3;Box Header 2X3
+1;NPO-G1206 2,2N;Reichelt;C16;2n2/50V;NP0 Surface-Mount Ceramic Multilayer Capacitors
+2;X7R-G1206 2,2/50;Reichelt;C7, C12;2µ2/50V;X7R Ceramic Capacitors
+1;L-PISM 33µ;Reichelt;L1;33µ;PISM - SMD Power Inductors
+1;SMD 1/4W 39K;Reichelt;R11;39K;YAGEO RC1206 -  General Purpose Chip Resistors
+1;SMD 1/4W 3,3K;Reichelt;R19;3K3;YAGEO RC1206 -  General Purpose Chip Resistors
+1;SMD 1/4W 47K;Reichelt;R18;47K;YAGEO RC1206 -  General Purpose Chip Resistors
+2;X5R-G1210 47;Reichelt;C19, C20;47µ/16V;X5R Ceramic Capacitors
+2;SMD 1/4W 4,7K;Reichelt;R8, R21;4K7;YAGEO RC1206 -  General Purpose Chip Resistors
+1;44W-50K;Reichelt;R20;50K;Model 44 -  Cermet Trimming Potentiometer - TT Electronics
+2;SMD 1/4W 56K;Reichelt;R3, R7;56K;YAGEO RC1206 -  General Purpose Chip Resistors
+1;TS 78L05 ACY;Reichelt;IC2;7805;STMicroelectronics - L78L - Positive voltage regulators
+2;BSS 138 SMD;Reichelt;T1, T2;BSS138;BSS 138 - N-Channel Logic Level Enhancement Mode Field Effect Transistor
+1;SMD DB1A70;Reichelt;BR1;DB102S;DIL Rechtifier - 1.0A Single-Phase Glass Passivated Bridge Rectifier
+1;TASTER 9314;Reichelt;B1;JTP1138/4.3;TACT SWITCH - JTP 1138
+1; L 5970 D;Reichelt;IC3;L5970D;STMicroelectronics - L5970D - Up to 1A step down switching regulator
+1;MBRS 240 SMD;Reichelt;D4;MBRS240;MBRS2X0 - 2A Schottky Power Rectifier
+1;MCP 6401T-E/OT;Reichelt;OPA1;MCP6401;MCP6401 - 1 MHz, 45 µA Op Amps - Microchip
+1;NA 05W K;Reichelt;K1;NA-5V;Fujitsu NA - Minature Relay - 2 Poles - 1 to 2A
+1;PIC 12F675-I/SN;Reichelt;IC1;PIC12F675;PIC12F675 - 8-Pin FLASH-Based 8-Bit CMOS Microcontrollers
+8;PMEG 4010BEA NXP;Reichelt;D1, D2, D3, D5, D6, D7, D8, D9;PMEG4010;PMEGXX10 - 1A very low VF MEGA Schottky barrier rectifier - NXP
+1;AKL 086-06;Reichelt;X1;RT034 Typ 086;Screw solder terminal - X06
+1;SMD-LED 1206 RT;Reichelt;LED1;Red;LED Monochromatic
+1;OMT 125 0,5A;Reichelt;F1;T 0A5;OMT - Non resettable SMD Fuse
+1;SMD-LED 1206 GE;Reichelt;LED2;Yellow;LED Monochromatic
+1;ZXCT 1009FTA;Reichelt;CS1;ZXCT1009;ZXCT1009 - HIGH-SIDE CURRENT MONITOR

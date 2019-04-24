@@ -20,7 +20,7 @@ Qty     Order               Distributor Reference                           VALU
 1       SMD 1/4W 39K        Reichelt    R11                                 39K             YAGEO RC1206 -  General Purpose Chip Resistors
 1       SMD 1/4W 3,3K       Reichelt    R19                                 3K3             YAGEO RC1206 -  General Purpose Chip Resistors
 1       SMD 1/4W 47K        Reichelt    R18                                 47K             YAGEO RC1206 -  General Purpose Chip Resistors
-2       X5R-G1210 47        Reichelt    C19, C20                            47µ/16V         X5R Ceramic Capacitors
+2       X5R-G1210 47U       Reichelt    C19, C20                            47µ/16V         X5R Ceramic Capacitors
 2       SMD 1/4W 4,7K       Reichelt    R8, R21                             4K7             YAGEO RC1206 -  General Purpose Chip Resistors
 1       44W-50K             Reichelt    R20                                 50K             Model 44 -  Cermet Trimming Potentiometer - TT Electronics
 2       SMD 1/4W 56K        Reichelt    R3, R7                              56K             YAGEO RC1206 -  General Purpose Chip Resistors
@@ -28,7 +28,7 @@ Qty     Order               Distributor Reference                           VALU
 2       BSS 138 SMD         Reichelt    T1, T2                              BSS138          BSS 138 - N-Channel Logic Level Enhancement Mode Field Effect Transistor
 1       SMD DB1A70          Reichelt    BR1                                 DB102S          DIL Rechtifier - 1.0A Single-Phase Glass Passivated Bridge Rectifier
 1       TASTER 9314         Reichelt    B1                                  JTP1138/4.3     TACT SWITCH - JTP 1138
-1        L 5970 D           Reichelt    IC3                                 L5970D          STMicroelectronics - L5970D - Up to 1A step down switching regulator
+1       L 5970 D            Reichelt    IC3                                 L5970D          STMicroelectronics - L5970D - Up to 1A step down switching regulator
 1       MBRS 240 SMD        Reichelt    D4                                  MBRS240         MBRS2X0 - 2A Schottky Power Rectifier
 1       MCP 6401T-E/OT      Reichelt    OPA1                                MCP6401         MCP6401 - 1 MHz, 45 µA Op Amps - Microchip
 1       NA 05W K            Reichelt    K1                                  NA-5V           Fujitsu NA - Minature Relay - 2 Poles - 1 to 2A

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -8124,6 +8124,7 @@ Contents Switches.
 <part name="X2" library="omcConnector" deviceset="BOXHD-06" device="-2.54" technology="-S" value="2X3"/>
 <part name="C21" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
+<part name="R22" library="omcResistor" deviceset="RC1206" device="" technology="-56000" value="56K"/>
 </parts>
 <sheets>
 <sheet>
@@ -8213,8 +8214,10 @@ voltage operation</text>
 <wire x1="24.638" y1="86.36" x2="24.638" y2="104.14" width="0.1524" layer="94"/>
 <wire x1="24.638" y1="104.14" x2="20.32" y2="104.14" width="0.1524" layer="94"/>
 <text x="211.074" y="140.208" size="1.27" layer="98">V_ISNS [V] = I_VCC [A]</text>
-<text x="131.318" y="75.184" size="1.4224" layer="98" rot="R90">over-current
+<text x="131.318" y="77.724" size="1.4224" layer="98" rot="R90">over-current
 reset button</text>
+<text x="162.56" y="17.78" size="1.778" layer="91">v1.0: inital draft
+v1.1: added LED paralel R, button IF fix</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -8284,8 +8287,8 @@ reset button</text>
 <attribute name="VALUE" x="212.09" y="164.338" size="1.778" layer="96"/>
 </instance>
 <instance part="R16" gate="G$1" x="210.82" y="134.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="206.502" y="135.1026" size="1.778" layer="95"/>
-<attribute name="VALUE" x="203.708" y="132.334" size="1.778" layer="96"/>
+<attribute name="NAME" x="209.296" y="136.6774" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="209.296" y="134.366" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND30" gate="1" x="210.82" y="127"/>
 <instance part="K1" gate="G$1" x="182.88" y="96.52" smashed="yes" rot="R90">
@@ -8462,13 +8465,13 @@ reset button</text>
 <attribute name="NAME" x="135.89" y="15.621" size="1.778" layer="95"/>
 <attribute name="VALUE" x="135.89" y="13.081" size="1.778" layer="96"/>
 </instance>
-<instance part="LED1" gate="G$1" x="124.46" y="101.6"/>
-<instance part="R10" gate="G$1" x="124.46" y="88.9" smashed="yes" rot="R90">
-<attribute name="NAME" x="125.984" y="90.3986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="125.984" y="88.138" size="1.778" layer="96"/>
+<instance part="LED1" gate="G$1" x="127" y="106.68"/>
+<instance part="R10" gate="G$1" x="124.46" y="96.52" smashed="yes" rot="R90">
+<attribute name="NAME" x="125.984" y="98.0186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="125.984" y="95.758" size="1.778" layer="96"/>
 </instance>
-<instance part="P+3" gate="1" x="124.46" y="111.76" smashed="yes">
-<attribute name="VALUE" x="121.92" y="113.03" size="1.778" layer="96"/>
+<instance part="P+3" gate="1" x="124.46" y="116.84" smashed="yes">
+<attribute name="VALUE" x="121.92" y="118.11" size="1.778" layer="96"/>
 </instance>
 <instance part="H1" gate="G$1" x="180.34" y="35.56" smashed="yes" rot="R90">
 <attribute name="NAME" x="183.134" y="36.1442" size="1.778" layer="95"/>
@@ -8490,7 +8493,7 @@ reset button</text>
 <attribute name="VALUE" x="236.474" y="33.0962" size="0.8128" layer="96"/>
 </instance>
 <instance part="GND33" gate="1" x="233.68" y="30.48"/>
-<instance part="B1" gate="G$1" x="127" y="76.2" rot="R90"/>
+<instance part="B1" gate="G$1" x="127" y="78.74" rot="R90"/>
 <instance part="GND18" gate="1" x="124.46" y="66.04"/>
 <instance part="C15" gate="G$1" x="127" y="40.64" smashed="yes" rot="R90">
 <attribute name="NAME" x="125.476" y="45.847" size="1.778" layer="95"/>
@@ -8513,6 +8516,10 @@ reset button</text>
 </instance>
 <instance part="GND34" gate="1" x="25.4" y="111.76" smashed="yes" rot="R270">
 <attribute name="VALUE" x="19.558" y="110.998" size="1.778" layer="96"/>
+</instance>
+<instance part="R22" gate="G$1" x="121.92" y="106.68" smashed="yes" rot="R90">
+<attribute name="NAME" x="120.65" y="110.2614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="120.65" y="107.442" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -8684,9 +8691,10 @@ reset button</text>
 <segment>
 <pinref part="B1" gate="G$1" pin="P$2"/>
 <pinref part="B1" gate="G$1" pin="P$1"/>
-<wire x1="127" y1="68.58" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="127" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
-<junction x="124.46" y="68.58"/>
+<junction x="124.46" y="71.12"/>
+<wire x1="124.46" y1="71.12" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C15" gate="G$1" pin="1"/>
@@ -8811,7 +8819,11 @@ reset button</text>
 <segment>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="109.22" x2="124.46" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="R22" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="111.76" x2="124.46" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="111.76" x2="127" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="114.3" x2="124.46" y2="111.76" width="0.1524" layer="91"/>
+<junction x="124.46" y="111.76"/>
 </segment>
 </net>
 <net name="V_ISNS" class="0">
@@ -9178,20 +9190,17 @@ reset button</text>
 <net name="N$27" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="93.98" x2="124.46" y2="99.06" width="0.1524" layer="91"/>
-<junction x="124.46" y="93.98"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
+<wire x1="76.2" y1="93.98" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="93.98" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <pinref part="B1" gate="G$1" pin="P$3"/>
 <pinref part="B1" gate="G$1" pin="P$4"/>
-<wire x1="127" y1="83.82" x2="124.46" y2="83.82" width="0.1524" layer="91"/>
-<junction x="124.46" y="83.82"/>
+<wire x1="124.46" y1="91.44" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="88.9" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="86.36" x2="127" y2="86.36" width="0.1524" layer="91"/>
+<junction x="124.46" y="86.36"/>
+<wire x1="121.92" y1="88.9" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<junction x="124.46" y="88.9"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -9217,6 +9226,17 @@ reset button</text>
 <wire x1="203.2" y1="73.66" x2="215.9" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="68.58" x2="215.9" y2="73.66" width="0.1524" layer="91"/>
 <junction x="215.9" y="73.66"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="101.6" x2="124.46" y2="101.6" width="0.1524" layer="91"/>
+<junction x="124.46" y="101.6"/>
+<wire x1="124.46" y1="101.6" x2="127" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="127" y1="101.6" x2="127" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -8125,6 +8125,11 @@ Contents Switches.
 <part name="C21" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
 <part name="R22" library="omcResistor" deviceset="RC1206" device="" technology="-56000" value="56K"/>
+<part name="C22" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
+<part name="C23" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
+<part name="GND35" library="supply1" deviceset="GND" device=""/>
+<part name="GND36" library="supply1" deviceset="GND" device=""/>
+<part name="R23" library="omcResistor" deviceset="RC1206" device="" technology="-200" value="200R"/>
 </parts>
 <sheets>
 <sheet>
@@ -8216,8 +8221,15 @@ voltage operation</text>
 <text x="211.074" y="140.208" size="1.27" layer="98">V_ISNS [V] = I_VCC [A]</text>
 <text x="131.318" y="77.724" size="1.4224" layer="98" rot="R90">over-current
 reset button</text>
-<text x="162.56" y="17.78" size="1.778" layer="91">v1.0: inital draft
-v1.1: added LED paralel R, button IF fix</text>
+<text x="162.56" y="17.78" size="1.778" layer="91">v1.1: added LED paralel R, button IF fix</text>
+<text x="141.224" y="13.462" size="1.4224" layer="98">tank capacitor
+for adc</text>
+<wire x1="125.984" y1="26.67" x2="125.984" y2="8.89" width="0.1524" layer="98" style="longdash"/>
+<wire x1="125.984" y1="8.89" x2="153.924" y2="8.89" width="0.1524" layer="98" style="longdash"/>
+<wire x1="153.924" y1="8.89" x2="153.924" y2="26.67" width="0.1524" layer="98" style="longdash"/>
+<wire x1="153.924" y1="26.67" x2="125.984" y2="26.67" width="0.1524" layer="98" style="longdash"/>
+<text x="162.56" y="20.32" size="1.778" layer="91">v1.0: inital draft</text>
+<text x="162.56" y="15.24" size="1.778" layer="91">v1.2: tank capacitor on current adc</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -8312,9 +8324,9 @@ v1.1: added LED paralel R, button IF fix</text>
 <attribute name="NAME" x="165.608" y="97.536" size="1.27" layer="95" rot="R180"/>
 <attribute name="VALUE" x="165.608" y="95.758" size="1.27" layer="96" rot="R180"/>
 </instance>
-<instance part="GND20" gate="1" x="134.62" y="10.16"/>
-<instance part="P+4" gate="1" x="134.62" y="48.26" smashed="yes">
-<attribute name="VALUE" x="132.08" y="49.53" size="1.778" layer="96"/>
+<instance part="GND20" gate="1" x="104.14" y="10.16"/>
+<instance part="P+4" gate="1" x="104.14" y="48.26" smashed="yes">
+<attribute name="VALUE" x="101.6" y="49.53" size="1.778" layer="96"/>
 </instance>
 <instance part="R20" gate="G$1" x="236.22" y="157.48" rot="MR0"/>
 <instance part="R18" gate="G$1" x="226.06" y="147.32" smashed="yes" rot="R90">
@@ -8381,11 +8393,11 @@ v1.1: added LED paralel R, button IF fix</text>
 <attribute name="NAME" x="203.2" y="79.2226" size="1.778" layer="95"/>
 <attribute name="VALUE" x="203.2" y="76.4286" size="1.778" layer="96"/>
 </instance>
-<instance part="OPA1" gate="G$1" x="134.62" y="30.48" smashed="yes">
-<attribute name="PART" x="137.16" y="36.703" size="1.778" layer="95"/>
-<attribute name="VALUE" x="137.16" y="34.29" size="1.778" layer="96"/>
+<instance part="OPA1" gate="G$1" x="104.14" y="30.48" smashed="yes">
+<attribute name="PART" x="106.68" y="36.703" size="1.778" layer="95"/>
+<attribute name="VALUE" x="106.68" y="34.29" size="1.778" layer="96"/>
 </instance>
-<instance part="OPA1" gate="G$2" x="134.62" y="30.48"/>
+<instance part="OPA1" gate="G$2" x="104.14" y="30.48"/>
 <instance part="GND9" gate="1" x="88.9" y="66.04"/>
 <instance part="IC1" gate="G$1" x="63.5" y="93.98"/>
 <instance part="GND2" gate="1" x="40.64" y="83.82"/>
@@ -8455,15 +8467,15 @@ v1.1: added LED paralel R, button IF fix</text>
 <attribute name="NAME" x="171.4754" y="93.98" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="173.7614" y="93.98" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R11" gate="G$1" x="134.62" y="22.86" smashed="yes">
-<attribute name="NAME" x="136.652" y="26.3906" size="1.778" layer="95"/>
-<attribute name="VALUE" x="136.652" y="24.13" size="1.778" layer="96"/>
+<instance part="R11" gate="G$1" x="104.14" y="22.86" smashed="yes">
+<attribute name="NAME" x="106.172" y="26.3906" size="1.778" layer="95"/>
+<attribute name="VALUE" x="106.172" y="24.13" size="1.778" layer="96"/>
 </instance>
-<instance part="R9" gate="G$1" x="121.92" y="22.86"/>
-<instance part="GND16" gate="1" x="116.84" y="10.16"/>
-<instance part="C16" gate="G$1" x="132.08" y="17.78" smashed="yes" rot="R90">
-<attribute name="NAME" x="135.89" y="15.621" size="1.778" layer="95"/>
-<attribute name="VALUE" x="135.89" y="13.081" size="1.778" layer="96"/>
+<instance part="R9" gate="G$1" x="91.44" y="22.86"/>
+<instance part="GND16" gate="1" x="86.36" y="10.16"/>
+<instance part="C16" gate="G$1" x="101.6" y="17.78" smashed="yes" rot="R90">
+<attribute name="NAME" x="105.41" y="15.621" size="1.778" layer="95"/>
+<attribute name="VALUE" x="105.41" y="13.081" size="1.778" layer="96"/>
 </instance>
 <instance part="LED1" gate="G$1" x="127" y="106.68"/>
 <instance part="R10" gate="G$1" x="124.46" y="96.52" smashed="yes" rot="R90">
@@ -8495,12 +8507,12 @@ v1.1: added LED paralel R, button IF fix</text>
 <instance part="GND33" gate="1" x="233.68" y="30.48"/>
 <instance part="B1" gate="G$1" x="127" y="78.74" rot="R90"/>
 <instance part="GND18" gate="1" x="124.46" y="66.04"/>
-<instance part="C15" gate="G$1" x="127" y="40.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="125.476" y="45.847" size="1.778" layer="95"/>
-<attribute name="VALUE" x="125.476" y="43.307" size="1.778" layer="96"/>
+<instance part="C15" gate="G$1" x="96.52" y="40.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="94.996" y="45.847" size="1.778" layer="95"/>
+<attribute name="VALUE" x="94.996" y="43.307" size="1.778" layer="96"/>
 </instance>
-<instance part="GND17" gate="1" x="119.38" y="40.64" smashed="yes" rot="R270">
-<attribute name="VALUE" x="113.538" y="39.878" size="1.778" layer="96"/>
+<instance part="GND17" gate="1" x="88.9" y="40.64" smashed="yes" rot="R270">
+<attribute name="VALUE" x="83.058" y="39.878" size="1.778" layer="96"/>
 </instance>
 <instance part="X2" gate="1" x="22.86" y="101.6" smashed="yes" rot="R180"/>
 <instance part="X2" gate="3" x="22.86" y="96.52" smashed="yes" rot="R180"/>
@@ -8520,6 +8532,14 @@ v1.1: added LED paralel R, button IF fix</text>
 <instance part="R22" gate="G$1" x="121.92" y="106.68" smashed="yes" rot="R90">
 <attribute name="NAME" x="120.65" y="110.2614" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="120.65" y="107.442" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="C22" gate="G$1" x="129.54" y="22.86"/>
+<instance part="C23" gate="G$1" x="139.7" y="22.86"/>
+<instance part="GND35" gate="1" x="129.54" y="12.7"/>
+<instance part="GND36" gate="1" x="139.7" y="12.7"/>
+<instance part="R23" gate="G$1" x="121.92" y="30.48" smashed="yes" rot="R180">
+<attribute name="NAME" x="118.364" y="26.8986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="118.364" y="24.384" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -8596,7 +8616,7 @@ v1.1: added LED paralel R, button IF fix</text>
 </segment>
 <segment>
 <pinref part="GND20" gate="1" pin="GND"/>
-<wire x1="134.62" y1="12.7" x2="134.62" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="12.7" x2="104.14" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="OPA1" gate="G$2" pin="V-"/>
 </segment>
 <segment>
@@ -8669,7 +8689,7 @@ v1.1: added LED paralel R, button IF fix</text>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="116.84" y1="12.7" x2="116.84" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="12.7" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -8699,12 +8719,22 @@ v1.1: added LED paralel R, button IF fix</text>
 <segment>
 <pinref part="C15" gate="G$1" pin="1"/>
 <pinref part="GND17" gate="1" pin="GND"/>
-<wire x1="124.46" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="40.64" x2="91.44" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C21" gate="G$1" pin="1"/>
 <pinref part="GND34" gate="1" pin="GND"/>
 <wire x1="30.48" y1="111.76" x2="27.94" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND35" gate="1" pin="GND"/>
+<pinref part="C22" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="15.24" x2="129.54" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND36" gate="1" pin="GND"/>
+<pinref part="C23" gate="G$1" pin="2"/>
+<wire x1="139.7" y1="15.24" x2="139.7" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VOUT" class="0">
@@ -8791,11 +8821,11 @@ v1.1: added LED paralel R, button IF fix</text>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <pinref part="OPA1" gate="G$2" pin="V+"/>
-<wire x1="134.62" y1="45.72" x2="134.62" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="45.72" x2="104.14" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="40.64" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="40.64" x2="134.62" y2="40.64" width="0.1524" layer="91"/>
-<junction x="134.62" y="40.64"/>
+<wire x1="104.14" y1="40.64" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="40.64" x2="104.14" y2="40.64" width="0.1524" layer="91"/>
+<junction x="104.14" y="40.64"/>
 </segment>
 <segment>
 <wire x1="40.64" y1="109.22" x2="40.64" y2="111.76" width="0.1524" layer="91"/>
@@ -8837,9 +8867,9 @@ v1.1: added LED paralel R, button IF fix</text>
 <label x="215.138" y="135.128" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="116.84" y1="33.02" x2="127" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="33.02" x2="96.52" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="OPA1" gate="G$1" pin="+IN"/>
-<label x="117.348" y="33.528" size="1.778" layer="95"/>
+<label x="86.868" y="33.528" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -9157,34 +9187,34 @@ v1.1: added LED paralel R, button IF fix</text>
 <net name="N$20" class="0">
 <segment>
 <pinref part="OPA1" gate="G$1" pin="-IN"/>
-<wire x1="127" y1="27.94" x2="127" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="27.94" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <pinref part="R11" gate="G$1" pin="1"/>
-<wire x1="127" y1="22.86" x2="129.54" y2="22.86" width="0.1524" layer="91"/>
-<junction x="127" y="22.86"/>
-<wire x1="127" y1="22.86" x2="127" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="22.86" x2="99.06" y2="22.86" width="0.1524" layer="91"/>
+<junction x="96.52" y="22.86"/>
+<wire x1="96.52" y1="22.86" x2="96.52" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="C16" gate="G$1" pin="1"/>
-<wire x1="127" y1="17.78" x2="129.54" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="17.78" x2="99.06" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I_VCC" class="0">
 <segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="22.86" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="22.86" x2="142.24" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="OPA1" gate="G$1" pin="OUT"/>
-<pinref part="C16" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="17.78" x2="142.24" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="17.78" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
-<junction x="142.24" y="22.86"/>
-<wire x1="142.24" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
-<junction x="142.24" y="30.48"/>
-<label x="142.748" y="30.988" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="99.06" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
 <label x="94.488" y="99.568" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="139.7" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
+<label x="142.748" y="30.988" size="1.778" layer="95"/>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="129.54" y1="25.4" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="129.54" y1="30.48" x2="127" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="C23" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="25.4" x2="139.7" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="30.48" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
+<junction x="129.54" y="30.48"/>
+<junction x="139.7" y="30.48"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -9237,6 +9267,22 @@ v1.1: added LED paralel R, button IF fix</text>
 <junction x="124.46" y="101.6"/>
 <wire x1="124.46" y1="101.6" x2="127" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="127" y1="101.6" x2="127" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="C16" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="17.78" x2="114.3" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="OPA1" gate="G$1" pin="OUT"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="111.76" y1="30.48" x2="114.3" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="30.48" x2="116.84" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="30.48" x2="114.3" y2="22.86" width="0.1524" layer="91"/>
+<junction x="114.3" y="30.48"/>
+<wire x1="114.3" y1="22.86" x2="109.22" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="22.86" x2="114.3" y2="17.78" width="0.1524" layer="91"/>
+<junction x="114.3" y="22.86"/>
 </segment>
 </net>
 </nets>

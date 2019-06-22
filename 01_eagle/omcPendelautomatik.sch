@@ -3427,6 +3427,11 @@ In short: You are welcome to use (and extend) this library, but extensions must 
 <attribute name="VALUE" value="2µ2/50V"/>
 <attribute name="VENDOR#" value="MURATA,GCM31CR71H225KA55" constant="no"/>
 </technology>
+<technology name="-220000P">
+<attribute name="DIST#REICHELT#" value="KEM X7R1206 220N" constant="no"/>
+<attribute name="VALUE" value="220n/50V"/>
+<attribute name="VENDOR#" value="KEMET,1206C225K5R" constant="no"/>
+</technology>
 <technology name="-22000P">
 <attribute name="DIST#REICHELT#" value="X7R-G1206 22N" constant="no"/>
 <attribute name="VALUE" value="22n/50V"/>
@@ -8095,7 +8100,7 @@ Contents Switches.
 <part name="T2" library="omcTransistor" deviceset="BSS138" device="" value="BSS138"/>
 <part name="R12" library="omcResistor" deviceset="M44" device="W" technology="-10000" value="10K"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="C17" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n/50V"/>
+<part name="C17" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-220000P" value="220n/50V"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="D1" library="omcDiode" deviceset="PMEGXX10" device="BEA" technology="-40V" value="PMEG4010"/>
@@ -8119,17 +8124,15 @@ Contents Switches.
 <part name="GND33" library="supply1" deviceset="GND" device=""/>
 <part name="B1" library="omcSwitch" deviceset="JTP1138" device="" technology="-4.3MM" value="JTP1138/4.3"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="C15" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
+<part name="C15" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n/50V"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="X2" library="omcConnector" deviceset="BOXHD-06" device="-2.54" technology="-S" value="2X3"/>
-<part name="C21" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
+<part name="C21" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n/50V"/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
 <part name="R22" library="omcResistor" deviceset="RC1206" device="" technology="-56000" value="56K"/>
-<part name="C22" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
-<part name="C23" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-100000P" value="100n"/>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
-<part name="GND36" library="supply1" deviceset="GND" device=""/>
 <part name="R23" library="omcResistor" deviceset="RC1206" device="" technology="-200" value="200R"/>
+<part name="C22" library="omcCapacitor" deviceset="X7R" device="-1206" technology="-220000P" value="220n/50V"/>
 </parts>
 <sheets>
 <sheet>
@@ -8222,12 +8225,12 @@ voltage operation</text>
 <text x="131.318" y="77.724" size="1.4224" layer="98" rot="R90">over-current
 reset button</text>
 <text x="162.56" y="17.78" size="1.778" layer="91">v1.1: added LED paralel R, button IF fix</text>
-<text x="141.224" y="13.462" size="1.4224" layer="98">tank capacitor
+<text x="131.064" y="13.462" size="1.4224" layer="98">tank capacitor
 for adc</text>
 <wire x1="125.984" y1="26.67" x2="125.984" y2="8.89" width="0.1524" layer="98" style="longdash"/>
-<wire x1="125.984" y1="8.89" x2="153.924" y2="8.89" width="0.1524" layer="98" style="longdash"/>
-<wire x1="153.924" y1="8.89" x2="153.924" y2="26.67" width="0.1524" layer="98" style="longdash"/>
-<wire x1="153.924" y1="26.67" x2="125.984" y2="26.67" width="0.1524" layer="98" style="longdash"/>
+<wire x1="125.984" y1="8.89" x2="143.764" y2="8.89" width="0.1524" layer="98" style="longdash"/>
+<wire x1="143.764" y1="8.89" x2="143.764" y2="26.67" width="0.1524" layer="98" style="longdash"/>
+<wire x1="143.764" y1="26.67" x2="125.984" y2="26.67" width="0.1524" layer="98" style="longdash"/>
 <text x="162.56" y="20.32" size="1.778" layer="91">v1.0: inital draft</text>
 <text x="162.56" y="15.24" size="1.778" layer="91">v1.2: tank capacitor on current adc</text>
 </plain>
@@ -8533,14 +8536,12 @@ for adc</text>
 <attribute name="NAME" x="120.65" y="110.2614" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="120.65" y="107.442" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C22" gate="G$1" x="129.54" y="22.86"/>
-<instance part="C23" gate="G$1" x="139.7" y="22.86"/>
 <instance part="GND35" gate="1" x="129.54" y="12.7"/>
-<instance part="GND36" gate="1" x="139.7" y="12.7"/>
 <instance part="R23" gate="G$1" x="121.92" y="30.48" smashed="yes" rot="R180">
 <attribute name="NAME" x="118.364" y="26.8986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="118.364" y="24.384" size="1.778" layer="96"/>
 </instance>
+<instance part="C22" gate="G$1" x="129.54" y="22.86"/>
 </instances>
 <busses>
 </busses>
@@ -8728,13 +8729,8 @@ for adc</text>
 </segment>
 <segment>
 <pinref part="GND35" gate="1" pin="GND"/>
-<pinref part="C22" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="15.24" x2="129.54" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND36" gate="1" pin="GND"/>
-<pinref part="C23" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="15.24" x2="139.7" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="C22" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="VOUT" class="0">
@@ -9204,17 +9200,13 @@ for adc</text>
 <label x="94.488" y="99.568" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
-<label x="142.748" y="30.988" size="1.778" layer="95"/>
-<pinref part="C22" gate="G$1" pin="1"/>
+<label x="130.048" y="30.988" size="1.778" layer="95"/>
 <wire x1="129.54" y1="25.4" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R23" gate="G$1" pin="1"/>
 <wire x1="129.54" y1="30.48" x2="127" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="C23" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="25.4" x2="139.7" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="30.48" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="30.48" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
 <junction x="129.54" y="30.48"/>
-<junction x="139.7" y="30.48"/>
+<pinref part="C22" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$27" class="0">

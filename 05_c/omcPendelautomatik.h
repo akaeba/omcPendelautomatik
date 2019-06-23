@@ -19,16 +19,24 @@
 #ifndef __OMC_PENDELAUTOMATIK_H
 #define __OMC_PENDELAUTOMATIK_H
 
+/**
+ *  @defgroup CMACRO
+ *  help macros for pre compiler
+ *  @{
+ */
+#define pwrtwo(x) (1 << (x))
+/** @} */   // CMACRO
+
 
 /**
  *  @defgroup Help
  *  help defines
  *  @{
  */
-#define UI_TIME_MIN_SEC      5                                                      /**<  UI: Minimal Time between direction change */
-#define UI_TIME_MAX_SEC      180                                                    /**<  UI: Maximum Time between direction change */
-#define UI_TIME_DIG_MS       (((UI_TIME_MAX_SEC - UI_TIME_MIN_SEC) * 1000 ) / 256)  /**<  UI: Time increment per measured digit     */
-#define UI_OC_TRIP_MA        300                                                    /**<  UI: Fence for over current tripping       */
+#define UI_TIME_MIN_SEC      5                                                            /**<  UI: Minimal Time between direction change */
+#define UI_TIME_MAX_SEC      180                                                          /**<  UI: Maximum Time between direction change */
+#define UI_TIME_DIG_MS       (((UI_TIME_MAX_SEC - UI_TIME_MIN_SEC) * 1000 ) / pwrtwo(8))  /**<  UI: Time increment per measured digit     */
+#define UI_OC_TRIP_MA        300                                                          /**<  UI: Fence for over current tripping       */
 //#define UI_OC_TRIP_DIG
 
 /** @} */   // UI

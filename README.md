@@ -19,11 +19,11 @@ underlying calculations are done in the:
 
 As starting point can notated:
 
-```math
+\begin{equation}
 -I_1 &= \frac{V_I}{R_1}
 I2   &= \frac{V_O - V_I}{R_2}
 0    &= I_2 - I_1
-```
+\end{equation}
 
 
 

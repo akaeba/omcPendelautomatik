@@ -25,7 +25,7 @@ I2   &= \frac{V_O - V_I}{R_2}
 0    &= I_2 - I_1
 
 
-
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
 
 
 

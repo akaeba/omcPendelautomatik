@@ -39,12 +39,12 @@ For the amplification follows:
 A band limitation of the operational amplifier guarantees a good SNR and ADC resolution. An capacitor in parallel to R<sub>2</sub> limits the amplification.
 The [Amplification](#Amplification) extended with an expression of the capacitive resistance follows:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega C}}{R_1}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega C}}{R_1}\Bigr)" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega%20C}}{R_1}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega C}}{R_1}\Bigr)" />
 
 
 After short calculation and resolving the parallel operator:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega%020CR_2)}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" />
 
 
 The -3dB Amplitude criteria used:

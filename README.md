@@ -44,7 +44,7 @@ The [Amplification](#Amplification) extended with an expression of the capacitiv
 
 After short calculation and resolving the parallel operator:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega%020CR_2)}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega%20CR_2)}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" />
 
 
 The -3dB Amplitude criteria used:

@@ -22,17 +22,15 @@ with R<sub>SENSE</sub>=0.5 and R<sub>OUT</sub>=200:
 
 
 #### Opamp signal conditioning
-To conditioning the current sensors output for the microcontroller input is an band limited OPV used. The
-underlying calculations are done in the:
+The current sensors output voltage is processed by an band-limited operational amplifier
+
 
 ##### Amplification
-
 The following can be noted as a starting point:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;-I_1=\frac{V_I}{R_1}" title="\Large -I_1=\frac{V_I}{R_1}" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;I2=\frac{V_O-V_I}{R_2}" title="\Large I2=\frac{V_O-V_I}{R_2}" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;0=I_2-I_1" title="\Large 0=I_2-I_1" />
-
 
 All three equations inserted into each other:
 
@@ -41,7 +39,6 @@ All three equations inserted into each other:
 For the amplification follows:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1}\Bigr)" />
-
 
 
 ##### Band limit
@@ -65,7 +62,6 @@ Follows
 Solved for C
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\boxed{C=\frac{\sqrt{2}R_2-R_1}{\omega%20R_1%20R_2}}" title="\boxed{C=\frac{\sqrt{2}R_2-R_1}{\omega R_1 R_2}}" />
-
 
 
 ## Used Tools

@@ -10,7 +10,16 @@ Circuit to drive a model train cyclic from one station to the other and back.
 
 #### Current sensing and high-to-low conversion
 The current sensor measures the voltage drop over an 0.5R shunt resistor. The high to low side voltage translation
-is realized by [ZXCT1009](https://www.diodes.com/assets/Datasheets/ZXCT1009.pdf). According to the datasheet
+is realized by [ZXCT1009](https://www.diodes.com/assets/Datasheets/ZXCT1009.pdf). According to the datasheet causes 
+100mV voltage difference a output current of 1mA. Follows for V<sub>OUT</sub>:
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{out}%20=%20I_{VCC}%20\cdot%20R_{SENSE}%20\cdot%20\frac{1mA}{100mV}%20\cdot%20R_{out}" title="V_{out} = I_{VCC} \cdot R_{SENSE}} \cdot \frac{1mA}{100mV} \cdot R_{out}" />
+
+with R<sub>SENSE</sub>=0.5 and R<sub>OUT</sub>=200:
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;I_{VCC}[A]=V_{OUT}[V]" title="I_{VCC}[A]=V_{OUT}[V]" />
+
+
 
 #### Opamp signal conditioning
 To conditioning the current sensors output for the microcontroller input is an band limited OPV used. The
@@ -41,21 +50,17 @@ The [Amplification](#Amplification) extended with an expression of the capacitiv
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega%20C}}{R_1}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega C}}{R_1}\Bigr)" />
 
-
 After short calculation and solving the parallel operator:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega%20CR_2)}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" />
-
 
 Using the -3dB criteria
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{\sqrt{2}}" title="\frac{1}{\sqrt{2}}" />
 
-
 Follows
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{\sqrt{2}}=\frac{R_2}{R_1(1+\omega%20CR_2})" title="\frac{1}{\sqrt{2}}=\frac{R_2}{R_1(1+\omega CR_2})" />
-
 
 Solved for C
 

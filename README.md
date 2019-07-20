@@ -42,26 +42,24 @@ The [Amplification](#Amplification) extended with an expression of the capacitiv
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega%20C}}{R_1}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2||\frac{1}{\omega C}}{R_1}\Bigr)" />
 
 
-After short calculation and resolving the parallel operator:
+After short calculation and solving the parallel operator:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega%20CR_2)}\Bigr)" title="\Large V_O=V_I\Bigl(1+\frac{R_2}{R_1(1+\omega CR_2)}\Bigr)" />
 
 
-The -3dB Amplitude criteria used:
+Using the -3dB criteria
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{\sqrt{2}}" title="\frac{1}{\sqrt{2}}" />
 
 
+Follows
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{\sqrt{2}}=\frac{R_2}{R_1(1+\omega%20CR_2})" title="\frac{1}{\sqrt{2}}=\frac{R_2}{R_1(1+\omega CR_2})" />
 
 
+Solved for C
 
-To achieve a good SNR and ADC resolution is an band limitation of the operational amplifier necessary.
-
-
-best SNR performance can be achieved with an band limitation. To limi
-
-
-[Amplification](#Amplification)
-
-
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\boxed{C=\frac{\sqrt{2}R_2-R_1}{\omega%20R_1%20R_2}}" title="\boxed{C=\frac{\sqrt{2}R_2-R_1}{\omega R_1 R_2}}" />
 
 
 
